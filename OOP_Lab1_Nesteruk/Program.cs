@@ -188,7 +188,7 @@ class Program
         bool inSubMenu = true;
         while (inSubMenu)
         {
-            Console.WriteLine("1 - Use, 2 - Repair, 3 - GetUsesCount, 0 - Back");
+            Console.WriteLine("1 - Use, 2 - Repair, 3 - GetUsesCount, 4 - Enchant, 5 - CalculateSellPrice, 0 - Back");
             Console.Write("Your choice: ");
             string sub = Console.ReadLine();
             switch (sub)
@@ -205,6 +205,13 @@ class Program
                     break;
                 case "3":
                     Console.WriteLine($"Use count: {item.GetUsesCount()}.");
+                    break;
+                case "4":
+                    if (item.Enchant()) Console.WriteLine($"Item enchanted. New rarity: {item.rarity}.");
+                    else Console.WriteLine("Error: item already has maximum rarity (Mythic)!");
+                    break;
+                case "5":
+                    Console.WriteLine($"Sell price: {item.CalculateSellPrice()}.");
                     break;
                 case "0":
                     inSubMenu = false;

@@ -1,8 +1,12 @@
-﻿public enum ItemRarity
+﻿namespace VirtualItemShop
 {
-    COMMON,
-    RARE,
-    EPIC,
-    LEGENDARY,
-    MYTHIC
+    public enum ItemRarity
+    {
+        COMMON,
+        UNCOMMON,
+        RARE,
+        EPIC,
+        LEGENDARY,
+        MYTHIC
+    }
 }

@@ -43,5 +43,19 @@ namespace VirtualItemShop
         {
             return usesCount;
         }
+
+        public bool Enchant()
+        {
+            if (rarity == ItemRarity.MYTHIC) return false;
+            rarity++;
+            return true;
+        }
+
+        public double CalculateSellPrice()
+        {
+            double rarityMultiplier = 1 + (int)rarity * 0.5;
+            double durabilityFactor = durability / 100.0;
+            return Math.Round(price * rarityMultiplier * durabilityFactor, 2);
+        }
     }
 }
