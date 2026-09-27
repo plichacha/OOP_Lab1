@@ -123,6 +123,6 @@ https://github.com/plichacha/OOP_Lab1
 
 ## Author
 
-**plichacha**
+**Nesteruk Iryna**
 
 University OOP Laboratory Work — Lab 1
